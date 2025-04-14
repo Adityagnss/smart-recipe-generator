@@ -1,0 +1,52 @@
+.flavor-memories-container {
+  min-height: 85vh;
+}
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.memory-card {
+  position: relative;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-5px);
+}
+
+.memory-actions, 
+.edit-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.memory-actions button,
+.edit-actions button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.memory-description {
+  margin: 1rem 0;
+  overflow-wrap: break-word;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .memories-grid {
+    grid-template-columns: 1fr;
+  }
+}
